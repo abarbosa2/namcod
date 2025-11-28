@@ -1,6 +1,183 @@
 @import'./styles/color.css';
 
 body{
-    background-color: black;
+    background-color: var(--back-color);
     color: var(--main-color);
+    font-family: 'Lexend', sans-serif;
+}
+/* ---TO DO---*/
+/* - remplacer les pixels en REM */
+
+/*------------------HEADER------------------*/
+.navbar{
+    background-color: var(--back-color);
+    padding-right: 500px;
+    position: fixed;
+    display:flex;
+    align-items: center;  
+}
+.navbar_logo{
+    height: 50px;
+    margin-right: 170px;
+}
+.navbar_container_btns{
+    flex-direction: column;
+    align-items: center;
+}
+.navbar_primary_a , 
+.navbar_secondary_a {
+    font-family: 'Lexend', sans-serif;
+    background-color:var(--button-color);
+    border-color: var(--button-color);
+    color: var(--main-color);
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    border-radius: 50px;
+    height: 15px;
+    width: 90px;
+    display: flex;
+    font-size: xx-small;
+}
+.menu_burger{
+    font-family: 'Lexend', sans-serif; 
+    background-color:var(--button-color);
+    border-style: none;
+    border-radius: 1000px;
+    justify-content: center;
+    height: 15px;
+    display: flex;
+    width: 30px;
+}
+.burger{
+    align-items: center;
+    height: 15px;
+    color: var(--main-color);
+}
+/*------------------MAIN------------------*/
+.title-container{
+    overflow: hidden;
+}
+.title-scroll{
+    font-weight: 200;
+    text-align: center;
+    padding-top: 65px;
+    display: inline-block;
+   /* padding-left: 100%;*/
+    animation: scroll 10s linear infinite;
+
+}
+@keyframes scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+.subtitle{
+    text-align: center;
+    font-size: smaller;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.card_grid_container{
+    display: grid;
+    grid-template-columns: 18px 100px 10px 100px 10px 100px 18px;
+    margin-top: 60px;
+    /*color: var(--main-color);*/
+}
+.grid_primary_card{
+    /*color: var(--back-color);*/
+    background-color: var(--button-color);
+    grid-column: 2/3;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.grid_primary_card:hover{
+    background-color: var(--hover-color);
+    transition: transform background-color 0.5s linear;
+}
+.grid_secondary_card{
+    /*color: var(--back-color);*/
+    background-color: var(--button-color);
+    grid-column: 4/5; 
+    width: 100px;
+    height: 120px; 
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.grid_secondary_card:hover{
+    background-color: var(--hover-color);
+    transition: transform background-color 0.5s linear;
+}
+.grid_thirdary_card{
+    /*color: var(--back-color);*/
+    background-color: var(--button-color);
+    grid-column: 6/7;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.grid_thirdary_card:hover{
+    background-color: var(--hover-color);
+    transition: transform background-color 0.5s linear;
+  /*transform: scale(1.5);
+    transition: 0.3s ease;*/
+}
+.download_grid_container{
+    display: grid;
+    grid-template-columns: 65px 220px 65px;  
+}
+.download_grid{
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--button-color);
+    background: linear-gradient(
+                to right, 
+                var(--button-color),
+                var(--hover-color)
+                );
+    color: var(--main-color);
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    margin-top: 30px;
+    grid-column: 2/3;
+}
+/*------------------FOOTER------------------*/
+.logo_grid_container{
+    display: grid;
+    grid-template-columns: 135px 30px 30px 30px 100px;
+    grid-template-rows: 25px 5px;
+    padding-top: 90px;
+}
+.logo_grid_primary{
+    /*padding: 300px 90px 0px 130px;*/
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.logo_grid_secondary{
+    height: 30px;
+    /*margin: 20px 100px 50px 10px;*/
+    grid-column: 3/4;
+}
+.logo_grid_thirdary{
+    height: 30px;
+    grid-column: 4/5;
+}
+.protection_link , 
+.conditions_link {
+    color: var(--main-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    opacity: 50%;
+    font-size: x-small;
+    align-items: center;
 }
