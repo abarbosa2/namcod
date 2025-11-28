@@ -1,3 +1,6 @@
 :root{
     --main-color:white;
+    --back-color: black; 
+    --button-color: rgba(142, 36, 171, 1);
+    --hover-color: rgba(242, 163, 245, 0.87);
 }
