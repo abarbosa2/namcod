@@ -1,4 +1,4 @@
-@import'./styles/color.css';
+@import'./color.css';
 
 body{
     background-color: var(--back-color);
@@ -181,3 +181,4 @@ body{
     font-size: x-small;
     align-items: center;
 }
+
